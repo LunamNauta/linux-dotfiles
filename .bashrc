@@ -13,6 +13,6 @@ PS1='[\u@\h \W]\$ '
 
 #----------------My Config--------------------
 
-start-ssh(){ eval "$(ssh-agent -s)"; }
+ssh-start(){ eval "$(ssh-agent -s)"; }
 ssh-add-key(){ ssh-add "$HOME/.ssh/$1"; }
 
