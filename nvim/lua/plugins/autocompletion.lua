@@ -50,7 +50,6 @@ return{
                     documentation=require("cmp").config.window.bordered()
                 },
                 mapping = require("cmp").mapping.preset.insert({
-                    --[[
                     ["<TAB>"] = require("cmp").mapping(function(fallback)
                         if require("cmp").visible() then
                             require("cmp").select_next_item()
@@ -60,20 +59,6 @@ return{
                             fallback()
                         end
                     end, {"i", "s"}),
-                    --]]
-                    ['<Tab>'] = function(core, fallback)
-                        local cmp=require("cmp")
-                        local luasnip=require("luasnip")
-                        if vim.fn.pumvisible() == 1 then
-                        vim.fn.feedkeys(t('<C-n>'), 'n')
-                        elseif luasnip.expand_or_jumpable() then
-                            vim.fn.feedkeys(t('<Plug>luasnip-expand-or-jump'), '')
-                        --elseif not check_back_space() then
-                        --    cmp.mapping.complete()(core, fallback)
-                        else
-                            vim.cmd(':>')
-                        end
-                    end,
                     ["<C-SPACE>"]=require("cmp").mapping.complete(),
                     ["<C-e>"]=require("cmp").mapping.abort(),
                     ["<CR>"]=require("cmp").mapping.confirm({select=false, behavior=require("cmp").ConfirmBehavior.Replace}),
