@@ -1,0 +1,36 @@
+{
+	"layer": "top",
+	"position": "top",
+    "height": 20,
+
+	"modules-left": ["cpu", "memory", "disk"],
+	"modules-center": ["sway/workspaces"],
+	"modules-right": ["clock"],
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "format": "{name}"
+	},
+
+    "clock": {
+        "format": "  {:%I:%M %p     %d/%h/%Y}"
+    },
+
+    "cpu": {
+        "interval": 15,
+        "format": "  {}%",
+        "max-length": 10
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": "  {}%",
+        "max-length": 10
+    },
+
+    "disk": {
+        "interval": 60,
+        "format": "  {percentage_used:2}%",
+        "max-length": 10
+    }
+}

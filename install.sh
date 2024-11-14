@@ -8,6 +8,7 @@ set-config-link(){
     fi
 }
 
+set-config-link "$SCRIPTPATH/waybar" "$HOME/.config/waybar"
 set-config-link "$SCRIPTPATH/foot" "$HOME/.config/foot"
 set-config-link "$SCRIPTPATH/nvim" "$HOME/.config/nvim"
 set-config-link "$SCRIPTPATH/sway" "$HOME/.config/sway"
