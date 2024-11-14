@@ -18,10 +18,11 @@ set $term foot
 # Your preferred application launcher
 set $menu wmenu-run
 
-gaps inner 5
-default_border none
-titlebar_padding 1
-titlebar_border_thickness 0
+gaps inner 2
+default_border pixel 2
+#titlebar_padding 1
+#titlebar_border_thickness 0
+smart_gaps on
 
 ### Output configuration
 #
