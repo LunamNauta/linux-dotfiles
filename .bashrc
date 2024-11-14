@@ -13,6 +13,8 @@ PS1='[\u@\h \W]\$ '
 
 #----------------My Config--------------------
 
+export EDITOR="nvim"
+
 ssh-start(){ eval "$(ssh-agent -s)"; }
 ssh-add-key(){ ssh-add "$HOME/.ssh/$1"; }
 
